@@ -6,16 +6,26 @@ workshops, and contact. Plain HTML/CSS/JS — no build step, no dependencies.
 ## Structure
 
 ```
-index.html       Home
+index.html       Home (English)
 gallery.html      Stained glass / sculptures / glass fusion gallery (filterable)
 services.html     Services offered
 about.html        About the artist
 workshops.html    Workshops and schedule
 contact.html      Contact form + studio info
+hr/               Croatian translations of all six pages above, same filenames
 css/styles.css    All styles
-js/main.js        Nav toggle, gallery filter, lightbox
+js/main.js        Nav toggle, gallery filter, lightbox, language-switch active state
 favicon.svg       Site icon
 ```
+
+## Bilingual site (English / Croatian)
+
+English lives at the root (`/`, `/gallery`, ...) and Croatian under `/hr/`
+(`/hr`, `/hr/gallery`, ...). Each page links to its counterpart via the EN | HR
+switcher in the nav, and every page has `hreflang` tags (in `<head>`) and a
+sitemap.xml entry pointing both ways, so Google indexes them as a translated pair
+rather than as duplicate content. If a new page is added to one language, add the
+same page to the other and update both files' `hreflang` links and the sitemap.
 
 ## Editing content
 

@@ -153,6 +153,11 @@ p { margin: 0 0 1em; color: var(--color-text-muted); }
   display: inline-block;
 }
 
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
 .nav-links {
   display: flex;
   gap: 2rem;
