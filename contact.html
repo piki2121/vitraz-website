@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Vitraz Studio — Stained Glass, Croatia</title>
+  <meta name="description" content="Get in touch with Vitraz Studio in Croatia for commissions, restoration, and workshop bookings — shipping and projects available across Europe." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="canonical" href="https://vitraz.eu/contact" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Vitraz Studio" />
+  <meta property="og:title" content="Contact | Vitraz Studio — Stained Glass, Croatia" />
+  <meta property="og:description" content="Get in touch with Vitraz Studio in Croatia for commissions, restoration, and workshop bookings — shipping and projects available across Europe." />
+  <meta property="og:url" content="https://vitraz.eu/contact" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Contact | Vitraz Studio — Stained Glass, Croatia" />
+  <meta name="twitter:description" content="Get in touch with Vitraz Studio in Croatia for commissions, restoration, and workshop bookings — shipping and projects available across Europe." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Vitraz Studio",
+    "url": "https://vitraz.eu/",
+    "image": "https://vitraz.eu/favicon.svg",
+    "description": "Vitraz Studio designs and creates handcrafted stained glass windows, glass sculptures, and glass fusion art. Based in Croatia, serving clients across Europe with custom commissions, restoration, and hands-on workshops.",
+    "address": { "@type": "PostalAddress", "addressCountry": "HR" },
+    "areaServed": { "@type": "Place", "name": "Europe" },
+    "sameAs": ["https://www.instagram.com/vitraz.eu/"]
+  }
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="/" class="nav-brand"><span class="swatch"></span> Vitraz Studio</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/gallery">Gallery</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/workshops">Workshops</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <span class="eyebrow">Get in Touch</span>
+        <h1>Contact</h1>
+        <p>Questions about a commission, restoration, or workshop? Send a message below.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split split-reverse">
+        <div>
+          <!--
+            This is a static site, so the form needs a form backend to actually
+            deliver submissions. The easiest free option is Formspree:
+            1. Create a free account at formspree.io
+            2. Create a new form and copy its endpoint URL
+            3. Replace the action="#" below with that endpoint URL
+            Until then, this form will not send anywhere.
+          -->
+          <form class="form" action="#" method="POST">
+            <div>
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div>
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Commission, restoration, workshop..." />
+            </div>
+            <div>
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <p class="form-note">This form needs to be connected to a form service (e.g. Formspree) before it can send messages — see the code comment above the form.</p>
+          </form>
+        </div>
+
+        <div>
+          <h2>Studio Details</h2>
+          <div class="contact-info">
+            <div class="item">
+              <strong>Email</strong>
+              <p style="margin:0;">[replace@vitraz.eu]</p>
+            </div>
+            <div class="item">
+              <strong>Phone</strong>
+              <p style="margin:0;">[+XX XXX XXX XXX]</p>
+            </div>
+            <div class="item">
+              <strong>Studio</strong>
+              <p style="margin:0;">[Address / City, Country]</p>
+            </div>
+            <div class="item">
+              <strong>Hours</strong>
+              <p style="margin:0;">[By appointment / Tue–Sat, 10am–5pm]</p>
+            </div>
+          </div>
+
+          <h3 style="margin-top:2rem;">Follow Along</h3>
+          <div class="social-links">
+            <a href="https://www.instagram.com/vitraz.eu/" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener">IG</a>
+            <!-- Add Facebook / TikTok links here once those accounts exist -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="nav-brand" style="margin-bottom:1rem;"><span class="swatch"></span> Vitraz Studio</div>
+          <p>Handcrafted stained glass windows, sculptures, and glass fusion art. [Replace with city/country.]</p>
+          <div class="social-links">
+            <a href="https://www.instagram.com/vitraz.eu/" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener">IG</a>
+            <!-- Add Facebook / TikTok links here once those accounts exist -->
+          </div>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="/gallery">Gallery</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/workshops">Workshops</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Studio</h4>
+          <ul>
+            <li><a href="/about">About the Artist</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Vitraz Studio. All rights reserved.</span>
+        <span>vitraz.eu</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
