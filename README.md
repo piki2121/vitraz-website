@@ -49,12 +49,13 @@ Then open the printed localhost URL in your browser.
 
 ## Contact form
 
-The contact form has no backend (static sites can't process form submissions on their
-own). The easiest free option is [Formspree](https://formspree.io):
+The contact form submits to [Formspree](https://formspree.io) (form ID `mdeeqojp`),
+which emails submissions to the address used to create that Formspree form. It
+includes a honeypot field (`_gotcha`) for basic spam filtering.
 
-1. Create a free Formspree account and a new form.
-2. Copy the form's endpoint URL.
-3. In `contact.html`, replace `action="#"` with that endpoint URL.
+To change which email address receives submissions, or to see past submissions,
+log in to the Formspree dashboard. Formspree's free tier has a monthly submission
+limit — check the dashboard if messages stop arriving.
 
 ## Deployment
 

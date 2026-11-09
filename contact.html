@@ -67,15 +67,7 @@
     <section class="section">
       <div class="container split split-reverse">
         <div>
-          <!--
-            This is a static site, so the form needs a form backend to actually
-            deliver submissions. The easiest free option is Formspree:
-            1. Create a free account at formspree.io
-            2. Create a new form and copy its endpoint URL
-            3. Replace the action="#" below with that endpoint URL
-            Until then, this form will not send anywhere.
-          -->
-          <form class="form" action="#" method="POST">
+          <form class="form" action="https://formspree.io/f/mdeeqojp" method="POST">
             <div>
               <label for="name">Name</label>
               <input type="text" id="name" name="name" required />
@@ -92,8 +84,10 @@
               <label for="message">Message</label>
               <textarea id="message" name="message" rows="6" required></textarea>
             </div>
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+            <input type="hidden" name="_subject" value="New message from vitraz.eu contact form" />
             <button type="submit" class="btn btn-primary">Send Message</button>
-            <p class="form-note">This form needs to be connected to a form service (e.g. Formspree) before it can send messages — see the code comment above the form.</p>
+            <p class="form-note">We'll reply to the email address you provide above.</p>
           </form>
         </div>
 
