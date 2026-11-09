@@ -359,6 +359,15 @@ p { margin: 0 0 1em; color: var(--color-text-muted); }
   margin-bottom: 1.25rem;
 }
 
+.card-image {
+  display: block;
+  width: calc(100% + 4rem);
+  margin: -2rem -2rem 1.25rem -2rem;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
 .swatch-ruby { background: var(--color-ruby); }
 .swatch-amber { background: var(--color-amber); }
 .swatch-emerald { background: var(--color-emerald); }
