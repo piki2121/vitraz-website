@@ -19,16 +19,19 @@ favicon.svg       Site icon
 
 ## Editing content
 
-Every page has `[Replace with ...]` placeholders and gradient `placeholder-media` tiles
-standing in for real photos. To swap a placeholder tile for a real photo, replace the
-`<div class="placeholder-media">...</div>` block with:
+Real photos are in place for the Stained Glass and Glass Fusion gallery categories,
+the homepage featured image, and the before/after restoration photo on the Services
+page. **Sculptures** still uses placeholder tiles — add real photos to `images/` and
+swap them into `gallery.html` the same way (see the stained-glass/fusion entries there
+for the exact markup: an `<img class="gallery-photo" ...>` with matching
+`data-lightbox-trigger` / `data-lightbox-image` attributes for the click-to-enlarge view).
 
-```html
-<img src="images/your-photo.jpg" alt="Description of the piece" />
-```
+Remaining `[Replace with ...]` text placeholders (artist bio, pricing, contact details,
+workshop dates) still need real copy from the studio.
 
-Put your photo files in the `images/` folder and reference them with a relative path
-like `images/your-photo.jpg`.
+Any new photo goes in `images/` and is referenced with a root-relative path like
+`/images/your-photo.jpg` (note the leading slash — required since pages can live in
+subfolders, e.g. a future `/hr/` Croatian section).
 
 ## Local preview
 

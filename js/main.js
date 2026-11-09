@@ -1,4 +1,4 @@
-// Vitraz Studio — shared site behaviour (mobile nav, gallery filter, lightbox)
+// Vitraž Studio — shared site behaviour (mobile nav, gallery filter, lightbox)
 
 document.addEventListener("DOMContentLoaded", () => {
   initNavToggle();
@@ -22,10 +22,13 @@ function initNavToggle() {
 }
 
 function markActiveNavLink() {
-  const current = window.location.pathname.replace(/\/index\.html$/, "/").replace(/\.html$/, "");
+  let current = window.location.pathname
+    .replace(/index\.html$/, "")
+    .replace(/\.html$/, "")
+    .replace(/\/$/, "");
+  if (current === "") current = "/";
   document.querySelectorAll(".nav-links a").forEach((link) => {
-    const href = link.getAttribute("href");
-    if (href === current || (href === "/" && current === "")) {
+    if (link.getAttribute("href") === current) {
       link.classList.add("active");
     }
   });
@@ -59,8 +62,20 @@ function initLightbox() {
 
   document.querySelectorAll("[data-lightbox-trigger]").forEach((trigger) => {
     trigger.addEventListener("click", () => {
-      content.style.background = getComputedStyle(trigger).background;
-      content.textContent = trigger.dataset.caption || "";
+      const imageSrc = trigger.dataset.lightboxImage;
+      content.innerHTML = "";
+      if (imageSrc) {
+        content.classList.add("has-image");
+        content.style.background = "";
+        const img = document.createElement("img");
+        img.src = imageSrc;
+        img.alt = trigger.dataset.caption || "";
+        content.appendChild(img);
+      } else {
+        content.classList.remove("has-image");
+        content.style.background = getComputedStyle(trigger).background;
+        content.textContent = trigger.dataset.caption || "";
+      }
       lightbox.classList.add("open");
     });
   });

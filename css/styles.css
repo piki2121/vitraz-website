@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Vitraz Studio — shared stylesheet
+   Vitraž Studio — shared stylesheet
    Palette inspired by stained glass: deep charcoal base, jewel-tone accents.
    ========================================================================== */
 
@@ -182,6 +182,36 @@ p { margin: 0 0 1em; color: var(--color-text-muted); }
   cursor: pointer;
 }
 
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-left: 1.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.lang-switch a,
+.lang-switch span {
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  color: var(--color-text-muted);
+}
+
+.lang-switch span {
+  color: var(--color-amber);
+  background: rgba(224, 163, 56, 0.12);
+}
+
+.lang-switch a:hover {
+  color: var(--color-text);
+}
+
+.lang-switch .divider {
+  color: var(--color-border);
+  padding: 0;
+}
+
 @media (max-width: 768px) {
   .nav-toggle { display: block; }
 
@@ -343,6 +373,25 @@ p { margin: 0 0 1em; color: var(--color-text-muted); }
 .placeholder-media.square { aspect-ratio: 1 / 1; }
 .placeholder-media.wide { aspect-ratio: 16 / 10; }
 
+.gallery-photo,
+.featured-photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  display: block;
+}
+
+.showcase-photo {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  display: block;
+}
+
 /* ---- Gallery ---- */
 .gallery-filters {
   display: flex;
@@ -422,6 +471,25 @@ p { margin: 0 0 1em; color: var(--color-text-muted); }
   max-width: 600px;
   width: 100%;
   aspect-ratio: 4 / 5;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-content.has-image {
+  max-width: 90vw;
+  width: auto;
+  aspect-ratio: auto;
+  background: none !important;
+}
+
+.lightbox-content.has-image img {
+  display: block;
+  max-width: 90vw;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
   border-radius: var(--radius);
 }
 
