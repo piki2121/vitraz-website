@@ -1,4 +1,4 @@
-# Vitraž Studio — vitraz.eu
+# Vitraž — vitraz.eu
 
 Static site for a stained glass / glass art studio: gallery, services, about the artist,
 workshops, and contact. Plain HTML/CSS/JS — no build step, no dependencies.
@@ -109,7 +109,7 @@ Steps to take once the site is live, roughly in order of impact:
 
 1. **Submit to Google Search Console** (search.google.com/search-console) — verify
    `vitraz.eu`, submit `sitemap.xml`. This is what gets the site actually indexed.
-2. **Create a Google Business Profile** (business.google.com) for Vitraž Studio in
+2. **Create a Google Business Profile** (business.google.com) for Vitraž in
    Croatia. This is the single biggest lever for local/regional search and is what
    feeds Google's Knowledge Graph — the structured "fact" source many AI tools draw
    from when asked "where can I order X."
