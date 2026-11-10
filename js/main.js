@@ -71,18 +71,23 @@ function initGalleryFilter() {
   const items = document.querySelectorAll(".gallery-item");
   if (!filterButtons.length || !items.length) return;
 
-  filterButtons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      filterButtons.forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
-
-      const category = btn.dataset.filter;
-      items.forEach((item) => {
-        const matches = category === "all" || item.dataset.category === category;
-        item.classList.toggle("visible", matches);
-      });
+  function applyFilter(category) {
+    filterButtons.forEach((b) => b.classList.toggle("active", b.dataset.filter === category));
+    items.forEach((item) => {
+      const matches = category === "all" || item.dataset.category === category;
+      item.classList.toggle("visible", matches);
     });
+  }
+
+  filterButtons.forEach((btn) => {
+    btn.addEventListener("click", () => applyFilter(btn.dataset.filter));
   });
+
+  const requested = new URLSearchParams(window.location.search).get("filter");
+  const validCategories = Array.from(filterButtons, (b) => b.dataset.filter);
+  if (requested && validCategories.includes(requested)) {
+    applyFilter(requested);
+  }
 }
 
 function initLightbox() {

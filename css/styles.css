@@ -248,8 +248,8 @@ p { margin: 0 0 1em; color: var(--color-text-muted); }
 }
 
 .lang-switch span {
-  color: var(--color-amber);
-  background: rgba(224, 163, 56, 0.12);
+  color: var(--color-text);
+  background: var(--color-border);
 }
 
 .lang-switch a:hover {
@@ -522,8 +522,8 @@ p { margin: 0 0 1em; color: var(--color-text-muted); }
 }
 
 .filter-btn.active {
-  background: var(--color-amber);
-  border-color: var(--color-amber);
+  background: #ede4d3;
+  border-color: #ede4d3;
   color: #0d0e11;
 }
 
