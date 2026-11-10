@@ -316,22 +316,41 @@ p { margin: 0 0 1em; color: var(--color-text-muted); }
 /* ---- Hero ---- */
 .hero {
   position: relative;
-  padding: 6rem 0 5rem;
+  padding: 7rem 0 6rem;
   overflow: hidden;
+  background: #15171c url("/images/header-door-stained-glass.jpg") center/cover no-repeat;
 }
 
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: var(--gradient-glass);
-  opacity: 0.12;
+  background: linear-gradient(180deg, rgba(10, 11, 14, 0.55) 0%, rgba(10, 11, 14, 0.78) 100%);
   pointer-events: none;
 }
 
 .hero-inner {
   position: relative;
   max-width: 720px;
+}
+
+.hero .eyebrow {
+  color: var(--color-amber);
+}
+
+.hero h1,
+.hero-inner p {
+  color: #fdf8ef;
+}
+
+.hero .btn-outline {
+  border-color: rgba(253, 248, 239, 0.5);
+  color: #fdf8ef;
+}
+
+.hero .btn-outline:hover {
+  border-color: var(--color-amber);
+  color: var(--color-amber);
 }
 
 .hero-actions {
