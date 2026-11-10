@@ -36,6 +36,13 @@
     <xhtml:link rel="alternate" hreflang="hr" href="https://www.vitraz.eu/hr/workshops" />
   </url>
   <url>
+    <loc>https://www.vitraz.eu/faq</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vitraz.eu/faq" />
+    <xhtml:link rel="alternate" hreflang="hr" href="https://www.vitraz.eu/hr/faq" />
+  </url>
+  <url>
     <loc>https://www.vitraz.eu/contact</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
@@ -76,6 +83,13 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.vitraz.eu/workshops" />
     <xhtml:link rel="alternate" hreflang="hr" href="https://www.vitraz.eu/hr/workshops" />
+  </url>
+  <url>
+    <loc>https://www.vitraz.eu/hr/faq</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.vitraz.eu/faq" />
+    <xhtml:link rel="alternate" hreflang="hr" href="https://www.vitraz.eu/hr/faq" />
   </url>
   <url>
     <loc>https://www.vitraz.eu/hr/contact</loc>

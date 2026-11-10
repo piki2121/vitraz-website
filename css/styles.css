@@ -825,3 +825,117 @@ p { margin: 0 0 1em; color: var(--color-text-muted); }
   font-size: 0.8rem;
   color: var(--color-text-muted);
 }
+
+/* ---- FAQ accordion ---- */
+.faq-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  max-width: 720px;
+}
+
+.faq-nav a {
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  transition: border-color var(--transition), color var(--transition);
+}
+
+.faq-nav a:hover {
+  border-color: var(--color-amber);
+  color: var(--color-text);
+}
+
+.faq-group {
+  max-width: 760px;
+  margin: 0 auto 4rem;
+  scroll-margin-top: 6rem;
+}
+
+.faq-group h2 {
+  margin-bottom: 1.75rem;
+}
+
+.faq-item {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  margin-bottom: 0.9rem;
+  background: var(--color-surface);
+  overflow: hidden;
+}
+
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 1.1rem 3rem 1.1rem 1.4rem;
+  position: relative;
+  font-weight: 600;
+  font-size: 1.02rem;
+  line-height: 1.4;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  position: absolute;
+  top: 1.1rem;
+  right: 1.4rem;
+  font-size: 1.3rem;
+  color: var(--color-amber);
+  line-height: 1;
+  transition: transform var(--transition);
+}
+
+.faq-item[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq-item summary:hover {
+  color: var(--color-amber);
+}
+
+.faq-item-body {
+  padding: 0 1.4rem 1.3rem;
+  color: var(--color-text-muted);
+}
+
+.faq-item-body p {
+  margin-bottom: 0.9rem;
+}
+
+.faq-item-body p:last-child {
+  margin-bottom: 0;
+}
+
+.faq-item-body ul {
+  margin: 0 0 0.9rem 1.2rem;
+  color: var(--color-text-muted);
+}
+
+.faq-cta {
+  text-align: center;
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 2rem 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.faq-cta p {
+  margin-bottom: 1.1rem;
+  color: var(--color-text);
+}
+
+.faq-cta .btn-row {
+  display: flex;
+  gap: 0.9rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
