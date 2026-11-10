@@ -5,7 +5,39 @@ document.addEventListener("DOMContentLoaded", () => {
   initGalleryFilter();
   initLightbox();
   markActiveNavLink();
+  initThemeToggle();
 });
+
+function initThemeToggle() {
+  const toggle = document.querySelector(".theme-toggle");
+  if (!toggle) return;
+
+  const isHr = document.documentElement.lang === "hr";
+  const labels = isHr
+    ? { toLight: "Prebaci na svijetlu temu", toDark: "Prebaci na tamnu temu" }
+    : { toLight: "Switch to light theme", toDark: "Switch to dark theme" };
+
+  const logos = document.querySelectorAll(".logo-img, .footer-logo-img");
+
+  function applyTheme(theme) {
+    document.documentElement.setAttribute("data-theme", theme);
+    toggle.textContent = theme === "light" ? "☀" : "🌙";
+    toggle.setAttribute("aria-label", theme === "light" ? labels.toDark : labels.toLight);
+    logos.forEach((img) => {
+      img.src = theme === "light" ? "/images/logo-vitraz-black.webp" : "/images/logo-vitraz-cream.webp";
+    });
+  }
+
+  applyTheme(document.documentElement.getAttribute("data-theme") || "dark");
+
+  toggle.addEventListener("click", () => {
+    const next = document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light";
+    try {
+      localStorage.setItem("vitraz-theme", next);
+    } catch (e) {}
+    applyTheme(next);
+  });
+}
 
 function initNavToggle() {
   const toggle = document.querySelector(".nav-toggle");
