@@ -28,7 +28,7 @@ function initThemeToggle() {
     });
   }
 
-  applyTheme(document.documentElement.getAttribute("data-theme") || "dark");
+  applyTheme(document.documentElement.getAttribute("data-theme") || "light");
 
   toggle.addEventListener("click", () => {
     const next = document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light";
