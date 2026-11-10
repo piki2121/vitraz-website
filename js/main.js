@@ -1,7 +1,6 @@
 // Vitraž Studio — shared site behaviour (mobile nav, gallery filter, lightbox)
 
-// Replace with the real GA4 Measurement ID (from analytics.google.com) once created.
-var GA_MEASUREMENT_ID = "G-XXXXXXXXXX";
+var GA_MEASUREMENT_ID = "G-KM62J00Z60";
 
 document.addEventListener("DOMContentLoaded", () => {
   initNavToggle();
