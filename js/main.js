@@ -1,12 +1,88 @@
 // Vitraž Studio — shared site behaviour (mobile nav, gallery filter, lightbox)
 
+// Replace with the real GA4 Measurement ID (from analytics.google.com) once created.
+var GA_MEASUREMENT_ID = "G-XXXXXXXXXX";
+
 document.addEventListener("DOMContentLoaded", () => {
   initNavToggle();
   initGalleryFilter();
   initLightbox();
   markActiveNavLink();
   initThemeToggle();
+  initLangPrefTracking();
+  initCookieConsent();
 });
+
+function loadAnalytics() {
+  if (!GA_MEASUREMENT_ID || GA_MEASUREMENT_ID.indexOf("XXXX") !== -1) return;
+  if (window.__vitrazAnalyticsLoaded) return;
+  window.__vitrazAnalyticsLoaded = true;
+
+  var script = document.createElement("script");
+  script.async = true;
+  script.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_MEASUREMENT_ID;
+  document.head.appendChild(script);
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    window.dataLayer.push(arguments);
+  }
+  window.gtag = gtag;
+  gtag("js", new Date());
+  gtag("config", GA_MEASUREMENT_ID, { anonymize_ip: true });
+}
+
+function initCookieConsent() {
+  const banner = document.querySelector(".cookie-banner");
+  if (!banner) return;
+
+  const consent = (() => {
+    try {
+      return localStorage.getItem("vitraz-cookie-consent");
+    } catch (e) {
+      return null;
+    }
+  })();
+
+  if (consent === "accepted") {
+    loadAnalytics();
+    return;
+  }
+  if (consent === "declined") {
+    return;
+  }
+
+  banner.classList.add("visible");
+
+  const acceptBtn = banner.querySelector(".cookie-accept");
+  const declineBtn = banner.querySelector(".cookie-decline");
+
+  acceptBtn.addEventListener("click", () => {
+    try {
+      localStorage.setItem("vitraz-cookie-consent", "accepted");
+    } catch (e) {}
+    banner.classList.remove("visible");
+    loadAnalytics();
+  });
+
+  declineBtn.addEventListener("click", () => {
+    try {
+      localStorage.setItem("vitraz-cookie-consent", "declined");
+    } catch (e) {}
+    banner.classList.remove("visible");
+  });
+}
+
+function initLangPrefTracking() {
+  document.querySelectorAll(".lang-switch a").forEach((link) => {
+    link.addEventListener("click", () => {
+      const isHr = link.getAttribute("href").indexOf("/hr") === 0 || link.getAttribute("href") === "/hr";
+      try {
+        localStorage.setItem("vitraz-lang-pref", isHr ? "hr" : "en");
+      } catch (e) {}
+    });
+  });
+}
 
 function initThemeToggle() {
   const toggle = document.querySelector(".theme-toggle");
