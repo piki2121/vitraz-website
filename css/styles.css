@@ -425,6 +425,15 @@ p { margin: 0 0 1em; color: var(--color-text-muted); }
   border-color: var(--color-amber);
 }
 
+a.card {
+  display: block;
+}
+
+.card-link {
+  display: inline-block;
+  margin-top: 0.25rem;
+}
+
 .card .icon-swatch {
   width: 42px;
   height: 42px;
