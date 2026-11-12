@@ -6,11 +6,27 @@ document.addEventListener("DOMContentLoaded", () => {
   initNavToggle();
   initGalleryFilter();
   initLightbox();
+  initCarousels();
   markActiveNavLink();
   initThemeToggle();
   initLangPrefTracking();
   initCookieConsent();
 });
+
+function initCarousels() {
+  document.querySelectorAll(".carousel").forEach((carousel) => {
+    const track = carousel.querySelector(".carousel-track");
+    const prevBtn = carousel.querySelector(".carousel-prev");
+    const nextBtn = carousel.querySelector(".carousel-next");
+    if (!track) return;
+    const scrollAmount = () => {
+      const slide = track.querySelector(".carousel-slide");
+      return slide ? slide.getBoundingClientRect().width + 20 : track.clientWidth * 0.8;
+    };
+    if (prevBtn) prevBtn.addEventListener("click", () => track.scrollBy({ left: -scrollAmount(), behavior: "smooth" }));
+    if (nextBtn) nextBtn.addEventListener("click", () => track.scrollBy({ left: scrollAmount(), behavior: "smooth" }));
+  });
+}
 
 function loadAnalytics() {
   if (!GA_MEASUREMENT_ID || GA_MEASUREMENT_ID.indexOf("XXXX") !== -1) return;
