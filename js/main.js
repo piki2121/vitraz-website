@@ -1,4 +1,4 @@
-// Vitraž Studio — shared site behaviour (mobile nav, gallery filter, lightbox)
+// Vitraž Studio - shared site behaviour (mobile nav, gallery filter, lightbox)
 
 var GA_MEASUREMENT_ID = "G-KM62J00Z60";
 
