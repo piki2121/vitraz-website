@@ -65,9 +65,9 @@
           <li><a href="/">Home</a></li>
           <li><a href="/gallery">Gallery</a></li>
           <li><a href="/services">Services</a></li>
+          <li><a href="/shop">Shop</a></li>
           <li><a href="/about">About</a></li>
           <li><a href="/workshops">Workshops</a></li>
-          <li><a href="/faq">FAQ</a></li>
           <li><a href="/contact">Contact</a></li>
         </ul>
         <div class="lang-switch">
@@ -142,31 +142,35 @@
           <img class="showcase-photo" src="/images/workshop-poster-nerezine.jpg" alt="Poster for a stained glass workshop led by Blanka Klaić in Nerezine, island of Lošinj" loading="lazy" />
           <figcaption style="text-align:center; margin-top:0.75rem; font-size:0.85rem; color:var(--color-text-muted);">A past workshop in Nerezine, island of Lošinj.</figcaption>
         </figure>
-        <div class="gallery-grid">
-          <figure>
-            <img class="gallery-photo" src="/images/workshop-photo-sorting-glass.jpg" alt="Hands in black gloves sorting colored glass pieces on an outdoor table" loading="lazy" />
-          </figure>
-          <figure>
-            <img class="gallery-photo" src="/images/workshop-photo-arranging-pattern.jpg" alt="Hands arranging iridescent blue and green glass pieces over a traced pattern" loading="lazy" />
-          </figure>
-          <figure>
-            <img class="gallery-photo" src="/images/workshop-photo-measuring-glass.jpg" alt="Measuring and marking a strip of glass with a ruler before cutting" loading="lazy" />
-          </figure>
-          <figure>
-            <img class="gallery-photo" src="/images/workshop-photo-cutting-pattern.jpg" alt="Glass cutting tool beside amber glass pieces cut to a red-string pattern" loading="lazy" />
-          </figure>
-          <figure>
-            <img class="gallery-photo" src="/images/workshop-photo-selecting-pieces.jpg" alt="Hands selecting blue and green glass pieces at a workshop table" loading="lazy" />
-          </figure>
-          <figure>
-            <img class="gallery-photo" src="/images/workshop-photo-cutting-detail.jpg" alt="Close-up of hands cutting amber glass to a traced pattern" loading="lazy" />
-          </figure>
-          <figure>
-            <img class="gallery-photo" src="/images/workshop-photo-finished-panel.jpg" alt="Finished small stained glass panel in red, green, and blue, beside a stained glass instruction book" loading="lazy" />
-          </figure>
-          <figure>
-            <img class="gallery-photo" src="/images/workshop-photo-group-table.jpg" alt="Wide view of a workshop table covered in glass pieces, tools, and patterns" loading="lazy" />
-          </figure>
+        <div class="carousel">
+          <div class="carousel-track">
+            <figure class="carousel-slide">
+              <img class="gallery-photo" src="/images/workshop-photo-sorting-glass.jpg" alt="Hands in black gloves sorting colored glass pieces on an outdoor table" data-lightbox-trigger data-lightbox-image="/images/workshop-photo-sorting-glass.jpg" data-caption="Sorting glass before a workshop" loading="lazy" />
+            </figure>
+            <figure class="carousel-slide">
+              <img class="gallery-photo" src="/images/workshop-photo-arranging-pattern.jpg" alt="Hands arranging iridescent blue and green glass pieces over a traced pattern" data-lightbox-trigger data-lightbox-image="/images/workshop-photo-arranging-pattern.jpg" data-caption="Arranging glass over a traced pattern" loading="lazy" />
+            </figure>
+            <figure class="carousel-slide">
+              <img class="gallery-photo" src="/images/workshop-photo-measuring-glass.jpg" alt="Measuring and marking a strip of glass with a ruler before cutting" data-lightbox-trigger data-lightbox-image="/images/workshop-photo-measuring-glass.jpg" data-caption="Measuring glass before cutting" loading="lazy" />
+            </figure>
+            <figure class="carousel-slide">
+              <img class="gallery-photo" src="/images/workshop-photo-cutting-pattern.jpg" alt="Glass cutting tool beside amber glass pieces cut to a red-string pattern" data-lightbox-trigger data-lightbox-image="/images/workshop-photo-cutting-pattern.jpg" data-caption="Cutting glass to a traced pattern" loading="lazy" />
+            </figure>
+            <figure class="carousel-slide">
+              <img class="gallery-photo" src="/images/workshop-photo-selecting-pieces.jpg" alt="Hands selecting blue and green glass pieces at a workshop table" data-lightbox-trigger data-lightbox-image="/images/workshop-photo-selecting-pieces.jpg" data-caption="Selecting glass pieces at a workshop" loading="lazy" />
+            </figure>
+            <figure class="carousel-slide">
+              <img class="gallery-photo" src="/images/workshop-photo-cutting-detail.jpg" alt="Close-up of hands cutting amber glass to a traced pattern" data-lightbox-trigger data-lightbox-image="/images/workshop-photo-cutting-detail.jpg" data-caption="Hands-on at a stained glass workshop" loading="lazy" />
+            </figure>
+            <figure class="carousel-slide">
+              <img class="gallery-photo" src="/images/workshop-photo-finished-panel.jpg" alt="Finished small stained glass panel in red, green, and blue, beside a stained glass instruction book" data-lightbox-trigger data-lightbox-image="/images/workshop-photo-finished-panel.jpg" data-caption="A finished stained glass panel" loading="lazy" />
+            </figure>
+            <figure class="carousel-slide">
+              <img class="gallery-photo" src="/images/workshop-photo-group-table.jpg" alt="Wide view of a workshop table covered in glass pieces, tools, and patterns" data-lightbox-trigger data-lightbox-image="/images/workshop-photo-group-table.jpg" data-caption="A workshop table in progress" loading="lazy" />
+            </figure>
+          </div>
+          <button type="button" class="carousel-prev" aria-label="Previous photo">&#8249;</button>
+          <button type="button" class="carousel-next" aria-label="Next photo">&#8250;</button>
         </div>
       </div>
     </section>
@@ -216,6 +220,7 @@
           <ul>
             <li><a href="/gallery">Gallery</a></li>
             <li><a href="/services">Services</a></li>
+            <li><a href="/shop">Shop</a></li>
             <li><a href="/workshops">Workshops</a></li>
           </ul>
         </div>
@@ -235,6 +240,13 @@
       </div>
     </div>
   </footer>
+
+  <div class="lightbox">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <button class="lightbox-prev" aria-label="Previous image">&#8249;</button>
+    <button class="lightbox-next" aria-label="Next image">&#8250;</button>
+    <div class="lightbox-content"></div>
+  </div>
 
   <div class="cookie-banner">
     <p>We use cookies to understand how visitors use this site. See our <a href="/privacy">Privacy Policy</a> for details.</p>
